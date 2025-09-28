@@ -1,0 +1,23 @@
+# What Happens When You Type https://www.google.com in Your Browser and Press Enter
+
+When you type `https://www.google.com` in your browser and hit Enter, a complex sequence of events occurs to fetch and display the Google homepage. This process involves multiple layers of the web stack.
+
+1. **DNS Request:** Your browser queries the DNS to resolve `www.google.com` into an IP address. This can involve your OS cache, router, or external DNS servers.
+
+2. **TCP/IP Connection:** After obtaining the IP, a TCP connection is established on port 443 for HTTPS. TCP ensures reliable delivery of packets, and IP handles routing.
+
+3. **Firewall:** Firewalls on your network or Google's infrastructure inspect traffic for security, allowing, blocking, or logging packets.
+
+4. **HTTPS/SSL:** The browser performs an SSL/TLS handshake to encrypt communication and verify the server's SSL certificate.
+
+5. **Load Balancer:** Google’s load balancer distributes your request to the optimal backend server for availability and performance.
+
+6. **Web Server:** The web server handles static content and determines if dynamic processing is needed.
+
+7. **Application Server:** If dynamic content is required, the application server executes backend logic and APIs.
+
+8. **Database:** Persistent data like search history or preferences is fetched from a database and returned to the application server.
+
+9. **Response and Rendering:** The server sends the HTTP response back to your browser, which parses HTML, CSS, and JS to render the page.
+
+**Conclusion:** Typing a URL triggers DNS resolution, secure TCP/IP communication, firewall checks, load balancing, server-side processing, and database queries, all to deliver a seamless webpage.
